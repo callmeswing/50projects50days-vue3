@@ -11,6 +11,7 @@ export default defineConfig({
       "@api": "/src/api",
       "@cp": "/src/components",
       "@views": "/src/views",
+      "@styles": "/src/styles",
     },
   },
 });

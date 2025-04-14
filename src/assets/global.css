@@ -1,0 +1,32 @@
+/* 
+  所有元素都使用 border-box 模型：
+  元素的 padding 和 border 会被包含在设置的 width/height 中，
+  避免因 box-sizing 不一致导致的布局错乱。
+*/
+* {
+  box-sizing: border-box;
+  margin: 0; /* 移除浏览器默认外边距 */
+  padding: 0; /* 移除浏览器默认内边距 */
+}
+
+/* 
+	页面主体：
+	- 使用干净的 sans-serif 字体；
+	- 设置背景色为浅灰色；
+	- 设置文字颜色为深灰色，更柔和；
+  */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #c0c0c0;
+  color: #333;
+}
+
+/* 
+	所有链接：
+	- 不继承浏览器默认的蓝色链接颜色；
+	- 移除下划线；
+  */
+a {
+  color: inherit;
+  text-decoration: none;
+}
