@@ -17,7 +17,7 @@
         v-for="card in cards"
         :key="card.id"
         :dayNumber="card.id"
-        :imageSrc="card.image"
+        :imageSrc="card.image.href"
         :title="card.title"
         :route="card.link"
       ></LiveDemoCard>
@@ -42,7 +42,7 @@ onMounted(async () => {
   try {
     const result = await typedGet<ProjectCard[]>("/api/cards");
 
-    console.log(result);
+    // console.log(result);
 
     if (result.code === 200) {
       cards.value = result.data;
