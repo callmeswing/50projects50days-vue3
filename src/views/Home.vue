@@ -34,7 +34,7 @@ import { useCardGrid } from "@/composables/useCardGrid";
 import type { ProjectCard } from "@/types/projectCard";
 import { typedGet } from "@/utils/http";
 
-const { cardWidth } = useCardGrid(300, 5); // 300 最小卡片宽度，最多5列
+const { cardWidth } = useCardGrid(150, 5); //最小卡片宽度，最多5列
 
 const cards = ref<ProjectCard[]>([]);
 

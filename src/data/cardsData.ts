@@ -19,4 +19,40 @@ export const projectCards: ProjectCard[] = [
     image: "",
     link: "/projects/rotating-navigation-animation",
   },
+  {
+    id: 4,
+    title: "Rotating Navigation Animation",
+    image: "",
+    link: "/projects/rotating-navigation-animation",
+  },
+  {
+    id: 5,
+    title: "Rotating Navigation Animation",
+    image: "",
+    link: "/projects/rotating-navigation-animation",
+  },
+  {
+    id: 6,
+    title: "Rotating Navigation Animation",
+    image: "",
+    link: "/projects/rotating-navigation-animation",
+  },
+  {
+    id: 7,
+    title: "Rotating Navigation Animation",
+    image: "",
+    link: "/projects/rotating-navigation-animation",
+  },
+  {
+    id: 8,
+    title: "Rotating Navigation Animation",
+    image: "",
+    link: "/projects/rotating-navigation-animation",
+  },
+  {
+    id: 9,
+    title: "Rotating Navigation Animation",
+    image: "",
+    link: "/projects/rotating-navigation-animation",
+  },
 ];
