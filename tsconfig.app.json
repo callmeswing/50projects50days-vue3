@@ -8,12 +8,15 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    // tsconfig.json搬运过来的 vscode默认识别的是这个文件
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@cp/*": ["src/components/*"],
+      "@views/*": ["src/views/*"]
+    }
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "src/mock/index.js"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

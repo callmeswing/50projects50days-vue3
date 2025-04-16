@@ -1,4 +1,4 @@
-import type { ProjectCard } from "../types/ProjectCard";
+import type { ProjectCard } from "../types/projectCard";
 
 export const projectCards: ProjectCard[] = [
   {

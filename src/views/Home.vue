@@ -45,10 +45,10 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import { useCardGrid } from "@/composables/useCardGrid";
-import type { ProjectCard } from "@/types";
 import LiveDemoCard from "@cp/LiveDemoCard.vue";
-import http from "@/utils/http.ts";
+import { useCardGrid } from "@/composables/useCardGrid";
+import type { ProjectCard } from "@/types/projectCard";
+import { typedGet } from "@/utils/http";
 
 const { cardWidth } = useCardGrid(300, 5); // 300 最小卡片宽度，最多5列
 
@@ -56,11 +56,12 @@ const cards = ref<ProjectCard[]>([]);
 
 onMounted(async () => {
   try {
-    console.log("start");
-    const response = await http.get("/cards");
-    console.log(response);
-    if (response.code === 200) {
-      cards.value = response.data;
+    const result = await typedGet<ProjectCard[]>("/api/cards");
+
+    console.log(result);
+
+    if (result.code === 200) {
+      cards.value = result.data;
     } else {
       return new Error("code is not 200...");
     }
