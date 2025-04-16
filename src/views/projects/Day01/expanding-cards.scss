@@ -1,8 +1,19 @@
-.container {
+.page-wrapper {
+  height: 100vh;
   display: flex;
   align-items: center;
-  height: 78vh;
+  justify-content: center;
+
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.container {
   width: 86vw;
+  height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .panel {
     background-size: cover;
@@ -18,21 +29,21 @@
   }
 
   .panel h4 {
-    font-size: 24px;
+    font-size: 32px;
     position: absolute;
     bottom: 10px;
     left: 10px;
-    color: rgb(221, 221, 221);
+    color: rgb(205, 205, 205);
     opacity: 0;
   }
 
   .panel.active {
     flex: 5;
-    transform: scale(0.96);
+    transform: scale(0.98);
   }
 
   .panel.active h4 {
-    opacity: 0.6;
+    opacity: 0.8;
     transition: opacity 0.3s ease-in 0.4s;
   }
 }

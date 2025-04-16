@@ -4,55 +4,19 @@ export const projectCards: ProjectCard[] = [
   {
     id: 1,
     title: "Expanding Cards",
-    image: "",
+    image: new URL("@/assets/images/day01.png", import.meta.url),
     link: "/projects/expanding-cards",
   },
   {
     id: 2,
     title: "Progress Steps",
-    image: "",
+    image: new URL("", import.meta.url),
     link: "/projects/progress-steps",
   },
   {
     id: 3,
     title: "Rotating Navigation Animation",
-    image: "",
-    link: "/projects/rotating-navigation-animation",
-  },
-  {
-    id: 4,
-    title: "Rotating Navigation Animation",
-    image: "",
-    link: "/projects/rotating-navigation-animation",
-  },
-  {
-    id: 5,
-    title: "Rotating Navigation Animation",
-    image: "",
-    link: "/projects/rotating-navigation-animation",
-  },
-  {
-    id: 6,
-    title: "Rotating Navigation Animation",
-    image: "",
-    link: "/projects/rotating-navigation-animation",
-  },
-  {
-    id: 7,
-    title: "Rotating Navigation Animation",
-    image: "",
-    link: "/projects/rotating-navigation-animation",
-  },
-  {
-    id: 8,
-    title: "Rotating Navigation Animation",
-    image: "",
-    link: "/projects/rotating-navigation-animation",
-  },
-  {
-    id: 9,
-    title: "Rotating Navigation Animation",
-    image: "",
+    image: new URL("", import.meta.url),
     link: "/projects/rotating-navigation-animation",
   },
 ];

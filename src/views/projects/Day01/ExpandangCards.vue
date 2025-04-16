@@ -1,14 +1,16 @@
 <template>
-  <div class="container">
-    <div
-      v-for="(image, index) in cardList"
-      :key="index"
-      class="panel"
-      :class="image.active ? 'active' : ''"
-      :style="{ backgroundImage: `url(${image.url})` }"
-      @click="toggleActive(index)"
-    >
-      <h4>{{ image.title }}</h4>
+  <div class="page-wrapper">
+    <div class="container">
+      <div
+        v-for="(image, index) in cardList"
+        :key="index"
+        class="panel"
+        :class="image.active ? 'active' : ''"
+        :style="{ backgroundImage: `url(${image.url})` }"
+        @click="toggleActive(index)"
+      >
+        <h4>{{ image.title }}</h4>
+      </div>
     </div>
   </div>
 </template>
