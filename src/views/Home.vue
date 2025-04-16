@@ -12,23 +12,7 @@
     </section>
 
     <section class="project-gallery">
-      <!-- <div
-        class="project-card"
-        v-for="n in 1"
-        :key="n"
-        :style="{ width: cardWidth }"
-      >
-        <span class="day-tag">Day {{ n }}</span>
-
-        <div class="thumbnail">Image {{ n }}</div>
-
-        <div class="content">
-          <h4 class="title">Project {{ n }}</h4>
-          <a href="#" class="btn" target="_blank">Live Demo</a>
-        </div>
-      </div> -->
       <LiveDemoCard
-        class="project-card"
         :style="{ width: cardWidth }"
         v-for="card in cards"
         :key="card.id"
@@ -71,6 +55,6 @@ onMounted(async () => {
 });
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 @use "@styles/home"
 </style>

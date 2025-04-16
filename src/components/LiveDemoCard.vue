@@ -1,7 +1,7 @@
 <template>
   <!-- card 展示组件 -->
   <!-- 需要接收的数据：span天数 image路径 h4内容 href路径 -->
-  <div>
+  <div class="project-card">
     <span class="day-tag">Day {{ dayNumber }}</span>
     <img class="thumbnail" :src="imageSrc" />
     <div class="content">
@@ -10,6 +10,7 @@
     </div>
   </div>
 </template>
+
 <script setup lang="ts">
 const { dayNumber, imageSrc, title, route } = defineProps<{
   dayNumber: number;
@@ -18,3 +19,7 @@ const { dayNumber, imageSrc, title, route } = defineProps<{
   route: string;
 }>();
 </script>
+
+<style lang="sass" scoped>
+@use "@styles/liveDemoCard"
+</style>
