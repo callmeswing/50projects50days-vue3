@@ -1,3 +1,11 @@
+#app {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* 
   所有元素都使用 border-box 模型：
   元素的 padding 和 border 会被包含在设置的 width/height 中，
@@ -17,8 +25,8 @@
   */
 body {
   font-family: Arial, sans-serif;
-  background-color: #c0c0c0;
-  color: #333;
+  background-color: #ffffff;
+  color: #737373;
 }
 
 /* 

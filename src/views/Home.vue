@@ -55,6 +55,6 @@ onMounted(async () => {
 });
 </script>
 
-<style lang="sass" scoped>
-@use "@styles/home"
+<style lang="scss" scoped>
+@use "@styles/home";
 </style>
