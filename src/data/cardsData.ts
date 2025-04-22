@@ -10,7 +10,7 @@ export const projectCards: ProjectCard[] = [
   {
     id: 2,
     title: "Progress Steps",
-    image: new URL("", import.meta.url),
+    image: new URL("@/assets/images/day02.png", import.meta.url),
     link: "/projects/progress-steps",
   },
   {

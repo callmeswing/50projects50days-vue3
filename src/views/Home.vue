@@ -17,7 +17,7 @@
         v-for="card in cards"
         :key="card.id"
         :dayNumber="card.id"
-        :imageSrc="card.image.href"
+        :imageSrc="card.image"
         :title="card.title"
         :route="card.link"
       ></LiveDemoCard>

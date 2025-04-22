@@ -8,6 +8,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "ExpandingCards",
     component: () => import("@views/projects/Day01/ExpandangCards.vue"),
   },
+  {
+    path: "/projects/progress-steps",
+    name: "ProgressSteps",
+    component: () => import("@views/projects/Day02/ProgressSteps.vue"),
+  },
 ];
 
 export default routes;

@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+$line-border-fill: #668aa1;
+$line-border-empty: #e4e4e4;
+
+.container {
+  height: 100vh;
+  // flex布局
+  display: flex;
+  flex-direction: column;
+  // 主轴对齐 中心
+  justify-content: center;
+  // 交叉轴对齐 中心
+  align-items: center;
+  // 溢出控制
+  overflow: hidden;
+  // background-color: aquamarine;
+}
+
+// 进度条与图标的容器
+.progress-container {
+  // container设置了flex 因此这是flex-item
+  // background-color: burlywood;
+  width: 400px;
+  // height: 100px;
+  // 作为相对容器
+  position: relative;
+  // 方便布局子元素
+  display: flex;
+  justify-content: space-between;
+  // 放置溢出父元素，可以小但是不能超过
+  max-width: 100%;
+}
+
+// 伪元素 划线区域
+.progress-container::before {
+  content: "";
+  // 引用之前声明的变量
+  background-color: $line-border-empty;
+  height: 3px;
+  width: 100%;
+  // 🌟 伪元素::before之类 默认的display是inline, 而inline是不接受width和height的
+  // 解法可以是用定位容器+absolute，也可以直接修改display为block
+  // 为什么absolute可以？ 答：absolute意味着放弃了文档默认布局(inline、block)，也就脱离文档流了
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  // 由于我们设置了width=100% 所以不加left看似似乎是一样的 但是absolute定位 其实是需要手动设置一个起始位置参考的
+  left: 0;
+  z-index: -1;
+}
+
+// 进度条覆盖
+.progress {
+  position: absolute;
+  left: 0;
+  background-color: $line-border-fill;
+  height: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.circle {
+  background-color: #adadad;
+  color: #fff;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid $line-border-empty;
+  z-index: 1;
+  transition: 0.4s ease;
+}
+
+.circle.active {
+  border: 3px solid $line-border-fill;
+  color: #fff;
+  background-color: $line-border-empty;
+}
+
+.buttons {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons > .btn {
+  background-color: $line-border-fill;
+  color: #fff;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+  font-family: "Muli", sans-serif;
+  transition: 0.4s ease;
+}
+
+// 去除默认的outline
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.92);
+}
+
+.btn:disabled {
+  background-color: $line-border-empty;
+  cursor: not-allowed;
+}
