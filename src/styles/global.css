@@ -1,6 +1,8 @@
+/* 图标依赖 @fortawesome/fontawesome-free */
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
 #app {
   height: 100vh;
-  margin: 0;
 }
 
 /* 

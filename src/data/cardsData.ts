@@ -16,7 +16,7 @@ export const projectCards: ProjectCard[] = [
   {
     id: 3,
     title: "Rotating Navigation Animation",
-    image: new URL("", import.meta.url),
+    image: new URL("@/assets/images/day03.png", import.meta.url),
     link: "/projects/rotating-navigation-animation",
   },
 ];

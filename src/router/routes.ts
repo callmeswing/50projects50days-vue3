@@ -13,6 +13,30 @@ const routes: Array<RouteRecordRaw> = [
     name: "ProgressSteps",
     component: () => import("@views/projects/Day02/ProgressSteps.vue"),
   },
+  {
+    path: "/projects/rotating-navigation-animation",
+    redirect: "/projects/rotating-navigation-animation/griezmann",
+    name: "RotatingNavigationAnimation",
+    component: () =>
+      import("@views/projects/Day03/RotatingNavigationAnimation.vue"),
+    children: [
+      {
+        path: "/projects/rotating-navigation-animation/griezmann",
+        name: "RNA1",
+        component: () => import("@views/projects/Day03/pages/Griezmann.vue"),
+      },
+      {
+        path: "/projects/rotating-navigation-animation/sonny",
+        name: "RNA2",
+        component: () => import("@views/projects/Day03/pages/Sonny.vue"),
+      },
+      {
+        path: "/projects/rotating-navigation-animation/harrykane",
+        name: "RNA3",
+        component: () => import("@views/projects/Day03/pages/HarryKane.vue"),
+      },
+    ],
+  },
 ];
 
 export default routes;
