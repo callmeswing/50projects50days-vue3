@@ -37,6 +37,11 @@ const routes: Array<RouteRecordRaw> = [
       },
     ],
   },
+  {
+    path: "/projects/hidden-search",
+    name: "HiddenSearch",
+    component: () => import("@views/projects/Day04/HiddenSearch.vue"),
+  },
 ];
 
 export default routes;

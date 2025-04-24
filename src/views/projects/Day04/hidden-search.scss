@@ -1,0 +1,78 @@
+// 动画效果
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-4px);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.container-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6d5a66;
+  position: relative;
+}
+
+.search-container {
+  position: relative;
+}
+
+// 它是 static 默认布局 所以被覆盖了
+.search-input {
+  background-color: #fff;
+  border: 0;
+  height: 50px;
+  width: 50px;
+  padding: 15px;
+  font-size: 18px;
+  transition: width 0.4s ease;
+}
+
+.search-container.active .search-input {
+  width: 200px;
+}
+
+.search-btn {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  // 脱离文本流 不占据流空间
+  // 相对最近的relative容器定位，即container
+  // 会覆盖掉流空间的内容 切覆盖考虑加载顺序 感觉算是z-index+1了
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.4s ease;
+}
+
+.search-container.active .search-btn {
+  transform: translateX(198px);
+}
+
+.search-input:focus,
+.search-btn:focus {
+  outline: none;
+}
+
+.shake {
+  animation: shake 0.4s ease;
+}

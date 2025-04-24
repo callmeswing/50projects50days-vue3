@@ -21,7 +21,7 @@ $line-border-empty: #e4e4e4;
 .progress-container {
   // container设置了flex 因此这是flex-item
   // background-color: burlywood;
-  width: 400px;
+  width: 450px;
   // height: 100px;
   // 作为相对容器
   position: relative;
@@ -37,7 +37,7 @@ $line-border-empty: #e4e4e4;
   content: "";
   // 引用之前声明的变量
   background-color: $line-border-empty;
-  height: 3px;
+  height: 5px;
   width: 100%;
   // 🌟 伪元素::before之类 默认的display是inline, 而inline是不接受width和height的
   // 解法可以是用定位容器+absolute，也可以直接修改display为block
@@ -55,34 +55,33 @@ $line-border-empty: #e4e4e4;
   position: absolute;
   left: 0;
   background-color: $line-border-fill;
-  height: 3px;
+  height: 5px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .circle {
-  background-color: #adadad;
-  color: #fff;
-  height: 28px;
-  width: 28px;
+  background-color: #fbfbfb;
+  color: #aaaaaa;
+  height: 36px;
+  width: 36px;
   border-radius: 50%;
   align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid $line-border-empty;
+  border: 4px solid $line-border-empty;
   z-index: 1;
   transition: 0.4s ease;
 }
 
 .circle.active {
-  border: 3px solid $line-border-fill;
-  color: #fff;
-  background-color: $line-border-empty;
+  border: 4px solid $line-border-fill;
+  color: #6c6c6c;
 }
 
 .buttons {
-  padding: 20px;
+  padding: 24px;
   display: flex;
   justify-content: space-around;
 }
@@ -93,9 +92,9 @@ $line-border-empty: #e4e4e4;
   border: 0;
   border-radius: 2px;
   cursor: pointer;
-  padding: 8px 30px;
-  margin: 5px;
-  font-size: 14px;
+  padding: 12px 26px;
+  margin: 0px 12px;
+  font-size: 20px;
   font-family: "Muli", sans-serif;
   transition: 0.4s ease;
 }
