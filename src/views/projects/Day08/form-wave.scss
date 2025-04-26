@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  font-family: "Muli", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #4682b4;
+}
+
+.login-card {
+  background-color: rgba(0, 0, 0, 0.4); /* 黑色 + 30% 不透明度 */
+  height: 450px;
+  width: 380px;
+  border-radius: 5px;
+  padding: 20px 40px;
+  color: #fff;
+}
+
+.login-card h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.input-container {
+  position: relative;
+  margin: 20px 0 40px;
+}
+
+.input-container label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+.input-container label span {
+  // span本身是inline transform无法生效
+  // 除动画外 width、height也无效， padding-top、margin-bottom也可能无效或是不稳定
+  // 这里的主要目的是应用动画 利用span实现字符级差异控制
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.input-container input:focus + label span,
+.input-container input:valid + label span {
+  transform: translateY(-30px);
+  color: lightblue;
+}
+
+.input-container input {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  padding: 12px 0;
+  color: #fff;
+}
+
+input:focus {
+  outline: none;
+  border-bottom-color: lightblue;
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  width: 80%;
+  padding: 15px;
+  margin: 0 10%;
+  border: 0;
+  border-radius: 5px;
+  background-color: lightblue;
+  // family 不继承吗？默认
+  font-family: inherit;
+  font-size: 16px;
+  color: #2a4e6c;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.to-register span {
+  display: block;
+  margin-top: 26px;
+}
+
+a {
+  color: #add8e6;
+}
+
+a:focus {
+  transform: scale(1.2);
+}

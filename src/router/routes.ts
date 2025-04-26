@@ -42,6 +42,18 @@ const routes: Array<RouteRecordRaw> = [
     name: "HiddenSearch",
     component: () => import("@views/projects/Day04/HiddenSearch.vue"),
   },
+  // 07
+  {
+    path: "/projects/split-landing-page",
+    name: "SplitLandingPage",
+    component: () => import("@views/projects/Day07/SplitLandingPage.vue"),
+  },
+  // 08
+  {
+    path: "/projects/form-wave",
+    name: "FormWave",
+    component: () => import("@views/projects/Day08/FormWave.vue"),
+  },
 ];
 
 export default routes;

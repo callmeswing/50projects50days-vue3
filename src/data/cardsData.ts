@@ -25,4 +25,16 @@ export const projectCards: ProjectCard[] = [
     image: new URL("@/assets/images/day04.png", import.meta.url),
     link: "/projects/hidden-search",
   },
+  {
+    id: 7,
+    title: "Split Landing Page",
+    image: new URL("@/assets/images/day07.png", import.meta.url),
+    link: "/projects/split-landing-page",
+  },
+  {
+    id: 8,
+    title: "Form Wave",
+    image: new URL("@/assets/images/day08.png", import.meta.url),
+    link: "/projects/form-wave",
+  },
 ];
