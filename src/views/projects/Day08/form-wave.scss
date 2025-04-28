@@ -54,7 +54,7 @@ input:-webkit-autofill:active {
 
 .login-card {
   background-color: rgba(0, 0, 0, 0.4); /* 黑色 + 30% 不透明度 */
-  height: 500px;
+  height: 470px;
   width: 380px;
   border-radius: 5px;
   padding: 20px 40px;
@@ -69,7 +69,10 @@ input:-webkit-autofill:active {
 
 .input-container {
   position: relative;
-  margin: 20px 0 40px;
+  margin: 20px 0 35px;
+}
+.input-container.password-container {
+  margin-bottom: 20px;
 }
 
 .input-container label {
@@ -103,7 +106,7 @@ input:-webkit-autofill:active {
 // 密码提示默认()样式
 .input-container .password-reminder {
   display: block;
-  margin-top: 10px;
+  margin-top: 15px;
   text-align: center;
   color: lightblue;
   opacity: 0;
@@ -177,7 +180,8 @@ input:focus {
 
 .to-register span {
   display: block;
-  margin-top: 26px;
+  margin-top: 30px;
+  text-align: right;
 }
 
 a {

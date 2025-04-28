@@ -30,7 +30,7 @@
           </label>
         </div>
 
-        <div class="input-container">
+        <div class="input-container password-container">
           <input
             :type="[eyeOpen ? 'text' : 'password']"
             class="password"
@@ -92,11 +92,14 @@
           :disabled="!btnActive"
           @click="signUp"
         >
-          Login</button
-        ><br />
+          Login
+        </button>
 
         <div class="to-register">
-          <span>Already have account? <a href="#">&nbsp;&nbsp;Sign in</a></span>
+          <span
+            >Already have account?
+            <a href="#">&nbsp;&nbsp;Sign in 👾&nbsp;&nbsp;&nbsp;</a></span
+          >
         </div>
       </form>
     </div>

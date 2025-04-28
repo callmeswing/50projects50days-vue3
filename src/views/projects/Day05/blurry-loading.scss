@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+
 * {
-  // 修改font-family
+  font-family: "Ubuntu", sans-serif;
 }
 
 .container {
@@ -10,8 +12,8 @@
 
 .bg-wrapper {
   // 默认repeat（bg-repeat），center 表示居中（bg-position），cover 表示覆盖容器（跟在position后面需要/）
-  background: url("./pexels-trushotz-2012836-3656989.jpg") no-repeat center
-    center / cover;
+  background: url("https://images.pexels.com/photos/30623336/pexels-photo-30623336/free-photo-of-sleek-laptop-display-with-various-applications.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center / cover;
   // 以下四项的数值需要于blur进行匹配
   top: -30px;
   left: -30px;
