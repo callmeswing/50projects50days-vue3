@@ -85,7 +85,7 @@ input:-webkit-autofill:active {
 }
 
 // 字符上浮
-.input-container .hang + label span {
+.input-container .hang ~ label span {
   transform: translateY(-30px);
   color: lightblue;
 }
@@ -102,16 +102,25 @@ input:-webkit-autofill:active {
   text-align: center;
   color: lightblue;
   opacity: 0;
-  transform: scale(0.7);
+  transform: scale(0.8);
   transition: opacity 0.5s, transform 0.5s;
-  pointer-events: none; /* 不可点击 */
 }
 
 // 密码提示出现样式
 .input-container .password.hang ~ span {
   opacity: 1;
   transform: scale(1);
-  pointer-events: auto; /* 可以点击 */
+}
+
+.eye-status {
+  font-size: 18px;
+  color: lightblue;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  right: 2px;
+  top: 20px;
+  border: 0;
 }
 
 .input-container input {

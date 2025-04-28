@@ -32,7 +32,7 @@
 
         <div class="input-container">
           <input
-            type="password"
+            v-mode:type="[eyeOpen ? 'text' : 'password']"
             class="password"
             id="password"
             v-model="password"
@@ -45,6 +45,25 @@
               }
             "
           />
+
+          <button
+            type="button"
+            class="eye-status"
+            @mousedown.prevent="
+              () => {
+                eyeOpen = !eyeOpen;
+              }
+            "
+          >
+            <!-- 图标 i 需要字体支持 -->
+            <i
+              style="font-family: 'Font Awesome 6 Free'"
+              class="fas"
+              :class="[eyeOpen ? 'fa-eye-slash' : 'fa-eye']"
+              :hidden="!passwordHang"
+            ></i>
+          </button>
+
           <label for="password" class="password-label">
             <span style="transition-delay: 0ms">P</span>
             <span style="transition-delay: 40ms">a</span>
@@ -103,6 +122,7 @@ const emailHang = ref(false);
 const emailError = ref(false);
 const passwordHang = ref(false);
 const passwordErorr = ref(false);
+const eyeOpen = ref(false);
 
 // 校验规则
 const emailRegex =
@@ -153,6 +173,7 @@ function validatePssword() {
   } else {
     // 2.为空 取消hang
     passwordHang.value = false;
+    eyeOpen.value = false;
   }
 }
 
