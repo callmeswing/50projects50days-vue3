@@ -26,6 +26,18 @@ export const projectCards: ProjectCard[] = [
     link: "/projects/hidden-search",
   },
   {
+    id: 5,
+    title: "Blurry Loading",
+    image: new URL("@/assets/images/day05.png", import.meta.url),
+    link: "/projects/blurry-loading",
+  },
+  {
+    id: 6,
+    title: "Scroll Animation",
+    image: new URL("@/assets/images/day06.png", import.meta.url),
+    link: "/projects/scroll-animation",
+  },
+  {
     id: 7,
     title: "Split Landing Page",
     image: new URL("@/assets/images/day07.png", import.meta.url),

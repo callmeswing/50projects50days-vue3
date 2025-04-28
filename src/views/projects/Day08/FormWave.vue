@@ -32,7 +32,7 @@
 
         <div class="input-container">
           <input
-            v-mode:type="[eyeOpen ? 'text' : 'password']"
+            :type="[eyeOpen ? 'text' : 'password']"
             class="password"
             id="password"
             v-model="password"

@@ -1,0 +1,33 @@
+* {
+  // 修改font-family
+}
+
+.container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg-wrapper {
+  // 默认repeat（bg-repeat），center 表示居中（bg-position），cover 表示覆盖容器（跟在position后面需要/）
+  background: url("./pexels-trushotz-2012836-3656989.jpg") no-repeat center
+    center / cover;
+  // 以下四项的数值需要于blur进行匹配
+  top: -30px;
+  left: -30px;
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
+  position: absolute;
+  z-index: -1;
+}
+
+.loading-text {
+  font-size: 50px;
+  color: azure;
+  // 绝对定位后 宽度会被吃掉 但是依然属于block
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
