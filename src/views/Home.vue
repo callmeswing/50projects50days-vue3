@@ -23,7 +23,7 @@
       ></LiveDemoCard>
     </section>
 
-    <section class="project-about"></section>
+    <!-- <section class="project-about"></section> -->
   </div>
 </template>
 

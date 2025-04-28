@@ -1,6 +1,6 @@
 /* 图标依赖 @fortawesome/fontawesome-free */
 @import "@fortawesome/fontawesome-free/css/all.min.css";
-
+@import url("https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 #app {
   height: 100vh;
 }
@@ -23,7 +23,7 @@
 	- 设置文字颜色为深灰色，更柔和；
   */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Sansation, sans-serif;
   background-color: #ffffff;
   color: #737373;
 }

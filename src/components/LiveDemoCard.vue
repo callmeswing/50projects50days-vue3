@@ -20,6 +20,6 @@ const { dayNumber, imageSrc, title, route } = defineProps<{
 }>();
 </script>
 
-<style lang="sass" scoped>
-@use "@styles/liveDemoCard"
+<style lang="scss" scoped>
+@use "@styles/liveDemoCard";
 </style>
