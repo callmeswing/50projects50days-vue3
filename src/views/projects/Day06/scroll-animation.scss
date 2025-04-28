@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+.container {
+  // % 百分比是相对父元素的宽度 vw相对视窗宽度
+  // 为什么有时候会出现滚动条：竖向的滚动条也有一定空间占据
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+  background-color: #efedd6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color: #9c8643;
+  font-family: "Roboto Mono", monospace;
+  font-weight: bolder;
+  margin: 20px 0;
+}
+
+.box {
+  background-color: steelblue;
+  color: #fff;
+  width: 380px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 10px;
+  // 水平偏移量 (x轴) 垂直偏移量 (y轴) 模糊半径 (blur-radius) 阴影颜色
+  // box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  // 可以写多个阴影叠加，用逗号分隔，丰富层次
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 12px;
+  transform: translateX(300%);
+  transition: transform 0.5s ease;
+}
+
+// odd even     nth-of-type
+.box:nth-of-type(even) {
+  transform: translateX(-300%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
