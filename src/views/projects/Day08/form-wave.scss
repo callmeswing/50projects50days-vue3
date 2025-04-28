@@ -1,5 +1,40 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
+// 浏览器记住input内容 填入时样式冲突
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #fff;
+  caret-color: #fff;
+}
+
+// 动画效果
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-4px);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.4s ease;
+}
+
 * {
   font-family: "Muli", sans-serif;
 }
@@ -14,7 +49,7 @@
 
 .login-card {
   background-color: rgba(0, 0, 0, 0.4); /* 黑色 + 30% 不透明度 */
-  height: 450px;
+  height: 500px;
   width: 380px;
   border-radius: 5px;
   padding: 20px 40px;
@@ -37,6 +72,7 @@
   top: 15px;
   left: 0;
 }
+
 .input-container label span {
   // span本身是inline transform无法生效
   // 除动画外 width、height也无效， padding-top、margin-bottom也可能无效或是不稳定
@@ -48,10 +84,34 @@
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.input-container input:focus + label span,
-.input-container input:valid + label span {
+// 字符上浮
+.input-container .hang + label span {
   transform: translateY(-30px);
   color: lightblue;
+}
+
+.input-container .hang.error {
+  color: rgb(245, 37, 37);
+  border-bottom-color: rgb(245, 37, 37);
+}
+
+// 密码提示默认()样式
+.input-container .password-reminder {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: lightblue;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.5s, transform 0.5s;
+  pointer-events: none; /* 不可点击 */
+}
+
+// 密码提示出现样式
+.input-container .password.hang ~ span {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto; /* 可以点击 */
 }
 
 .input-container input {
@@ -85,8 +145,20 @@ input:focus {
   color: #2a4e6c;
 }
 
+// 默认的disable被btn覆盖了，因此需要手动指定样式
+.btn:disabled {
+  cursor: not-allowed; /* 鼠标变成禁止样式 */
+  background-color: #cccccc; /* 背景变灰 */
+  color: #666666; /* 字体颜色变淡 */
+  opacity: 0.7; /* 略微透明，显示禁用感 */
+}
+
 .btn:active {
   transform: scale(0.97);
+}
+
+.btn:disabled:active {
+  transform: none;
 }
 
 .to-register span {
@@ -100,4 +172,12 @@ a {
 
 a:focus {
   transform: scale(1.2);
+}
+
+.a-pop {
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 10px;
 }

@@ -37,3 +37,16 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+// 浏览器记住input内容 填入时样式冲突
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  // 防止被浏览器自作主张改背景色、文字色等
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: inherit;
+  background-color: transparent !important;
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  caret-color: inherit;
+}
