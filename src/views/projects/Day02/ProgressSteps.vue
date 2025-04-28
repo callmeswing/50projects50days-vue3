@@ -89,7 +89,7 @@ function updateActivePrev(id: number) {
 
 function updateProgressWidth() {
   progressWidth.value =
-    ((currentLastActiveId.value - 1) / (circles.length - 1)) * 100;
+    ((currentLastActiveId.value - 1) / (circles.length - 1)) * 95;
 }
 
 function test() {

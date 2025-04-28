@@ -38,7 +38,7 @@ $line-border-empty: #e4e4e4;
   // 引用之前声明的变量
   background-color: $line-border-empty;
   height: 5px;
-  width: 100%;
+  width: 95%;
   // 🌟 伪元素::before之类 默认的display是inline, 而inline是不接受width和height的
   // 解法可以是用定位容器+absolute，也可以直接修改display为block
   // 为什么absolute可以？ 答：absolute意味着放弃了文档默认布局(inline、block)，也就脱离文档流了
@@ -73,6 +73,7 @@ $line-border-empty: #e4e4e4;
   border: 4px solid $line-border-empty;
   z-index: 1;
   transition: 0.4s ease;
+  margin: 0;
 }
 
 .circle.active {
