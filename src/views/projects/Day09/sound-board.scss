@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  background-color: lightskyblue;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading,
+.error {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 1.5rem 2rem;
+  margin: 1rem;
+  border-radius: 3px;
+  border: 0;
+  background-color: rgb(94, 137, 224);
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(164, 135, 172);
+  scale: 0.97;
+}
+
+// 1.横向排列的间隔除了width+flex以外还有什么方式
+// 2.自由收缩、延展的灵活方式
+// 3.单位问题
+// 4.这里的wrap是继承了吗
+// ⭐ axios等请求部分 应该解决了！以及工具类中得http.ts

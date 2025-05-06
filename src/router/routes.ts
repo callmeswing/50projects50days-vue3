@@ -62,6 +62,16 @@ const routes: Array<RouteRecordRaw> = [
     name: "FormWave",
     component: () => import("@views/projects/Day08/FormWave.vue"),
   },
+  {
+    path: "/projects/sound-board-original",
+    name: "SoundBoardOriginal",
+    component: () => import("@views/projects/Day09_original/SoundBoard.vue"),
+  },
+  {
+    path: "/projects/sound-board",
+    name: "SoundBoard",
+    component: () => import("@views/projects/Day09/SoundBoard.vue"),
+  },
 ];
 
 export default routes;

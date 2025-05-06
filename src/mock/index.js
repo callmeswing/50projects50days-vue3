@@ -1,5 +1,6 @@
 import Mock from "mockjs";
 import { projectCards } from "../data/cardsData";
+import { sounds } from "../data/soundBoardData";
 
 const interceptors = [
   // {
@@ -19,10 +20,19 @@ const interceptors = [
       data: projectCards,
     },
   },
+  {
+    url: /^\/api\/sound-board\/sounds$/,
+    type: "get",
+    response: {
+      code: 200,
+      message: "success",
+      data: sounds,
+    },
+  },
 ];
 
 Mock.setup({
-  timeout: 300, // 表示响应时间介于 200 和 600 毫秒之间，默认值是'10-100'。
+  timeout: "200-800", // 模拟 200ms 到 600ms 之间的随机延迟
 });
 
 interceptors.forEach((interceptor) => {

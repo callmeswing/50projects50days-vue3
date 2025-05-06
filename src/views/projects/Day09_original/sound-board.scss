@@ -1,0 +1,19 @@
+.container {
+  height: 100vh;
+  background-color: #a164df;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background-color: #a164df;
+  color: azure;
+  font-size: 1.2rem;
+  padding: 1.5rem 2rem;
+  margin: 1rem;
+  border-radius: 3px;
+  border: 0;
+  cursor: pointer;
+}
