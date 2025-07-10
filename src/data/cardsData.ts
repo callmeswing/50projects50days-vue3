@@ -49,16 +49,22 @@ export const projectCards: ProjectCard[] = [
     image: new URL("@/assets/images/day08.png", import.meta.url),
     link: "/projects/form-wave",
   },
+  // {
+  //   id: 91,
+  //   title: "Sound Board Original",
+  //   image: new URL("@/assets/images/day091.png", import.meta.url),
+  //   link: "/projects/sound-board-original",
+  // },
   {
     id: 9,
-    title: "Sound Board Original",
+    title: "Sound Board",
     image: new URL("@/assets/images/day09.png", import.meta.url),
-    link: "/projects/sound-board-original",
+    link: "/projects/sound-board",
   },
   {
-    id: 10,
-    title: "Sound Board",
+    id:10 ,
+    title: "Dad Jokes",
     image: new URL("@/assets/images/day10.png", import.meta.url),
-    link: "/projects/sound-board",
+    link: "/projects/dad-jokes",
   },
 ];

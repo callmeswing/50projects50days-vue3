@@ -1,6 +1,7 @@
 import Mock from "mockjs";
 import { projectCards } from "../data/cardsData";
 import { sounds } from "../data/soundBoardData";
+import { dadJokes } from '../data/dadJokeData'
 
 const interceptors = [
   // {
@@ -29,10 +30,19 @@ const interceptors = [
       data: sounds,
     },
   },
+	{
+		url: /^\/api\/dad-jokes$/ ,
+		type: "get",
+		response: {
+			code: 200,
+			message: "success",
+			data: dadJokes
+		}
+	}
 ];
 
 Mock.setup({
-  timeout: "200-800", // 模拟 200ms 到 600ms 之间的随机延迟
+  timeout: "200-1000", // 模拟随机延迟
 });
 
 interceptors.forEach((interceptor) => {

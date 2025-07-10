@@ -1,0 +1,23 @@
+.container {
+	height: 100vh;
+	background-color: #686DE0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.joke-card {
+	background-color: #FFFFFF;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+	width: 50vw;
+	padding: 50px 20px;
+	text-align: center;
+}
+
+.status {
+	color: #FFFFFF;
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}

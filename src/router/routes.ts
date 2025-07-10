@@ -72,6 +72,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "SoundBoard",
     component: () => import("@views/projects/Day09/SoundBoard.vue"),
   },
+	{
+		path: "/projects/dad-jokes",
+		name: "DadJokes",
+		component: () => import("@views/projects/Day10/DadJokes.vue")
+	}
 ];
 
 export default routes;

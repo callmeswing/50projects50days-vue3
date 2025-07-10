@@ -38,7 +38,7 @@ a {
   text-decoration: none;
 }
 
-// 浏览器记住input内容 填入时样式冲突
+// 浏览器缓存input内容 填入时样式冲突
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
