@@ -62,9 +62,15 @@ export const projectCards: ProjectCard[] = [
     link: "/projects/sound-board",
   },
   {
-    id:10 ,
+    id: 10,
     title: "Dad Jokes",
     image: new URL("@/assets/images/day10.png", import.meta.url),
     link: "/projects/dad-jokes",
+  },
+  {
+    id: 11,
+    title: "Event KeyCodes",
+    image: new URL("@/assets/images/day11.png", import.meta.url),
+    link: "/projects/event-keycodes",
   },
 ];
