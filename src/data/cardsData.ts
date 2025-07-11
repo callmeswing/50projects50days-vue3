@@ -73,4 +73,10 @@ export const projectCards: ProjectCard[] = [
     image: new URL("@/assets/images/day11.png", import.meta.url),
     link: "/projects/event-keycodes",
   },
+  {
+    id: 12,
+    title: "Faq Collapse",
+    image: new URL("@/assets/images/day12.png", import.meta.url),
+    link: "/projects/faq-collapse",
+  },
 ];

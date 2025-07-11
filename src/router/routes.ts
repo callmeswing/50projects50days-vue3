@@ -82,6 +82,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "EventKeycodes",
     component: () => import("@/views/projects/Day11/EventKeycodes.vue"),
   },
+  {
+    path: "/projects/faq-collapse",
+    name: "FaqCollapse",
+    component: () => import("@/views/projects/Day12/FaqCollapes.vue"),
+  },
 ];
 
 export default routes;
