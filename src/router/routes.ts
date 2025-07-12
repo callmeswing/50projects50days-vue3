@@ -87,6 +87,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "FaqCollapse",
     component: () => import("@/views/projects/Day12/FaqCollapes.vue"),
   },
+  {
+    path: "/projects/random-choice-picker",
+    name: "RandomChoicePicker",
+    component: () => import("@/views/projects/Day13/RandomChoicePicker.vue"),
+  },
 ];
 
 export default routes;

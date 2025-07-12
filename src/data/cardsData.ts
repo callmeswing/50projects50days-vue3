@@ -79,4 +79,10 @@ export const projectCards: ProjectCard[] = [
     image: new URL("@/assets/images/day12.png", import.meta.url),
     link: "/projects/faq-collapse",
   },
+  {
+    id: 13,
+    title: "Random Choice Picker",
+    image: new URL("@/assets/images/day13.png", import.meta.url),
+    link: "/projects/random-choice-picker",
+  },
 ];
