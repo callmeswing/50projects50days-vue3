@@ -2,7 +2,6 @@
   position: relative; // 为绝对定位内容做参照
   aspect-ratio: 4 / 3;
   overflow: hidden; // 内容不能溢出
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;

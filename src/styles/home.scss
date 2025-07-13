@@ -6,21 +6,21 @@
 
   // header
   .home-header {
-    padding: 1rem 0;
+    padding: 10px 0;
     display: flex; // 横向排列
     justify-content: space-between; // 两端对齐
     align-items: center;
     background-color: #636363;
 
     .title {
-      padding-left: 16rem;
-      font-size: 1.8rem;
+      padding-left: 10%;
+      font-size: 22px;
     }
 
     .nav {
       display: flex;
-      gap: 1rem;
-      padding-right: 20rem;
+      gap: 15%;
+      padding-right: 20%;
 
       a {
         text-decoration: none;
@@ -34,18 +34,19 @@
 
   // intro
   .home-intro {
-    margin-top: 1rem;
-    font-size: 2.5rem;
+    font-size: 40px;
     text-align: center;
-    padding-top: 5rem;
-    padding-bottom: 8rem;
+    padding: 100px 0;
+
+    p {
+      max-width: 800px;
+      margin: 0 auto;
+    }
   }
 
   // gallery
   .project-gallery {
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
   }
 }
