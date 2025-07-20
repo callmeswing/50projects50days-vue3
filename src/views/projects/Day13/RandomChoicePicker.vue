@@ -79,7 +79,7 @@ function doFlashAnimation() {
   if (!displayedTags.value.length) return;
 
   // 渲染多少次
-  const totalFlashes = 30;
+  const totalFlashes = 20;
   // 渲染间隔 ms
   const intervalMs = 100;
   // 计数器

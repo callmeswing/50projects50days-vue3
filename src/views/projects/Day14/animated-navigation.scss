@@ -1,0 +1,96 @@
+.container {
+  flex: 1;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #e1faff 0%,
+    #eafbff 50%,
+    #5290f9 50%,
+    #5290f9 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar {
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, $alpha: 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 80px;
+  transition: width 0.6s linear; // transition1
+  // width: 350px; // active
+
+  .nav-ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    transition: width 0.6s linear; // transition2
+
+    .nav-li {
+      opacity: 0;
+      transform: rotateY(0deg);
+      transition: transform 0.6s linear, opacity 0.6s linear; // transition3
+
+      a {
+        color: #000;
+        margin: 0 10px;
+        text-decoration: none;
+        position: relative;
+      }
+    }
+  }
+}
+
+.icon {
+  background-color: #fff;
+  border: 0;
+  padding: 0;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.icon .line {
+  background-color: #5290f9;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  transition: transform 0.6s linear; // transition4
+}
+
+.icon .line2 {
+  top: auto;
+  bottom: 10px;
+}
+
+// active status 👇
+.nav-bar.active {
+  width: 350px;
+
+  .nav-ul {
+    width: 100%;
+  }
+
+  .nav-li {
+    opacity: 100%;
+    transform: rotateY(360deg);
+  }
+
+  .icon .line1 {
+    transform: rotate(-765deg) translateY(5.5px);
+  }
+
+  .icon .line2 {
+    transform: rotate(765deg) translateY(-5.5px);
+  }
+}

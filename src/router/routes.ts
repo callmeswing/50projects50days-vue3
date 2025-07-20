@@ -92,6 +92,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "RandomChoicePicker",
     component: () => import("@/views/projects/Day13/RandomChoicePicker.vue"),
   },
+  {
+    path: "/projects/animated-navigation",
+    name: "AnimatedNavigation",
+    component: () => import("@/views/projects/Day14/AnimatedNavigation.vue"),
+  },
 ];
 
 export default routes;
