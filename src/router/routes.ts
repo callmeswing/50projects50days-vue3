@@ -97,6 +97,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "AnimatedNavigation",
     component: () => import("@/views/projects/Day14/AnimatedNavigation.vue"),
   },
+  {
+    path: "/projects/increment-counter",
+    name: "IncrementCounter",
+    component: () => import("@/views/projects/Day15/IncrementCounter.vue"),
+  },
 ];
 
 export default routes;

@@ -51,7 +51,7 @@ const handleSearch = () => {
     )}`;
     window.open(url, "_blank");
   } else {
-    // 触发新增的动画
+    searchQuery.value = "";
     triggerShake();
   }
 };
