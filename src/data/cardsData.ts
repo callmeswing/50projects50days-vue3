@@ -97,4 +97,10 @@ export const projectCards: ProjectCard[] = [
     image: new URL("@/assets/images/day15.png", import.meta.url),
     link: "/projects/increment-counter",
   },
+  {
+    id: 25,
+    title: "Sticky Navigation",
+    image: new URL("@/assets/images/day25.png", import.meta.url),
+    link: "/projects/sticky-navigation",
+  },
 ];

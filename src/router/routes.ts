@@ -102,6 +102,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "IncrementCounter",
     component: () => import("@/views/projects/Day15/IncrementCounter.vue"),
   },
+  {
+    path: "/projects/sticky-navigation",
+    name: "StickyNavigation",
+    component: () => import("@/views/projects/Day25/StickyNavigation.vue"),
+  },
 ];
 
 export default routes;
