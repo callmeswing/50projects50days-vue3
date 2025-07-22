@@ -1,53 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// 通用 a
+a.current,
+a:hover {
+  color: #c0392b;
+}
+
+// 通用 container
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Page
 .home-page {
   flex: 1;
-  padding: 0;
+  min-height: 100vh;
   color: azure;
-  background-color: #c2c2c2;
 
-  // header
-  .home-header {
-    padding: 10px 0;
-    display: flex; // 横向排列
-    justify-content: space-between; // 两端对齐
-    align-items: center;
-    background-color: #636363;
+  // Header
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: #222;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
 
-    .title {
-      padding-left: 10%;
-      font-size: 22px;
-      margin: 8px 0;
+    .container {
+      padding: 18px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
     }
 
-    .nav {
+    .header-title {
+      font-size: 26px;
+    }
+
+    ul {
+      list-style: none;
       display: flex;
-      gap: 15%;
-      padding-right: 20%;
+    }
 
-      a {
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
+    a {
+      padding: 6px 12px;
+      transition: all 0.3s ease-in-out;
     }
   }
 
-  // intro
-  .home-intro {
-    font-size: 40px;
-    text-align: center;
-    padding: 100px 0;
+  // Header Active
+  .header.active {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 
-    p {
-      max-width: 800px;
+    .container {
+      padding: 10px 0;
+    }
+  }
+
+  // Intro
+  .intro {
+    height: 60vh;
+    background-image: url("https://www.brainvire.com/blog/wp-content/uploads/2023/10/Pros-and-Cons-of-Hiring-Full-Stack-Developer-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: -2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .container {
+      max-width: 900px;
       margin: 0 auto;
     }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 28px;
+      line-height: 40px;
+    }
   }
 
-  // gallery
+  .intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+  }
+
+  // Gallery
   .project-gallery {
     display: flex;
     flex-wrap: wrap;
+    background-color: #222;
   }
 }
