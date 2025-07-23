@@ -107,6 +107,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "StickyNavigation",
     component: () => import("@/views/projects/Day25/StickyNavigation.vue"),
   },
+  {
+    path: "/projects/mobile-tab-navigation",
+    name: "MobileTabNavigation",
+    component: () => import("@/views/projects/Day38/MobileTabNavigation.vue"),
+  },
 ];
 
 export default routes;

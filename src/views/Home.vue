@@ -2,7 +2,7 @@
   <div class="home-page">
     <div class="header" ref="headerRef" :class="{ active: isHeaderActive }">
       <div class="container">
-        <h1 class="header-title"><a href="#">50 Projects in 50 Days</a></h1>
+        <h1 class="header-title"><a href="#" v-html="title"></a></h1>
         <nav class="header-nav">
           <ul>
             <li><a href="#" class="current">Home</a></li>
@@ -43,6 +43,10 @@ import LiveDemoCard from "@cp/LiveDemoCard.vue";
 import { useCardGrid } from "@/composables/useCardGrid";
 import type { ProjectCard } from "@/types/projectCard";
 import { typedGet } from "@/utils/http";
+
+const title = ref(
+  `50 <span style="color: #c0392b;">Pro</span>jects in 50 days`
+);
 
 const intro = ref(
   `This website for show my VUE <span style="color: #c0392b;"> + </span>Scss skills`

@@ -103,4 +103,10 @@ export const projectCards: ProjectCard[] = [
     image: new URL("@/assets/images/day25.png", import.meta.url),
     link: "/projects/sticky-navigation",
   },
+  {
+    id: 38,
+    title: "Mobile Tab Navigation",
+    image: new URL("@/assets/images/day38.png", import.meta.url),
+    link: "/projects/mobile-tab-navigation",
+  },
 ];
