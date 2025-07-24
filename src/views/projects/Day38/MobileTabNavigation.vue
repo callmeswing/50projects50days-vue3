@@ -19,7 +19,7 @@
             class="navItem"
             v-for="item in navInfoList"
             :class="{ active: item.ref === activeNav }"
-            @click="() => navChange(item.ref)"
+            @click="navChange(item.ref)"
           >
             <i :class="item.icon" />
             <p>{{ item.nav }}</p>

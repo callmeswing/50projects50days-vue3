@@ -112,6 +112,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "MobileTabNavigation",
     component: () => import("@/views/projects/Day38/MobileTabNavigation.vue"),
   },
+  {
+    path: "/projects/verify-account",
+    name: "VerifyAccount",
+    component: () => import("@/views/projects/Day41/VerifyAccount.vue"),
+  },
 ];
 
 export default routes;

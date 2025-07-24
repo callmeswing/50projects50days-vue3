@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="login-card">
-      <h1 class="title">Sign up 🤗</h1>
+      <h1 class="title">Sign up 👇</h1>
 
       <form action="">
         <div class="input-container">
@@ -92,7 +92,7 @@
           :disabled="!btnActive"
           @click="signUp"
         >
-          Login
+          Sign up
         </button>
 
         <div class="to-register">
