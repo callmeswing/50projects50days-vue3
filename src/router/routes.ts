@@ -117,6 +117,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "VerifyAccount",
     component: () => import("@/views/projects/Day41/VerifyAccount.vue"),
   },
+  {
+    path: "/projects/todo-list",
+    name: "TodoList",
+    component: () => import("@/views/projects/Day49/TodoList.vue"),
+  },
 ];
 
 export default routes;

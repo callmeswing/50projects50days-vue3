@@ -115,4 +115,10 @@ export const projectCards: ProjectCard[] = [
     image: new URL("@/assets/images/day41.png", import.meta.url),
     link: "/projects/verify-account",
   },
+  {
+    id: 49,
+    title: "Todo List",
+    image: new URL("@/assets/images/day49.png", import.meta.url),
+    link: "/projects/todo-list",
+  },
 ];
