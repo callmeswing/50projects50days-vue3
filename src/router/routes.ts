@@ -103,22 +103,27 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("@/views/projects/Day15/IncrementCounter.vue"),
   },
   {
-    path: "/projects/sticky-navigation",
+    path: "/projects/drink-water", //16
+    name: "DrinkWater",
+    component: () => import("@/views/projects/Day16/DrinkWater.vue"),
+  },
+  {
+    path: "/projects/sticky-navigation", //25
     name: "StickyNavigation",
     component: () => import("@/views/projects/Day25/StickyNavigation.vue"),
   },
   {
-    path: "/projects/mobile-tab-navigation",
+    path: "/projects/mobile-tab-navigation", // 38
     name: "MobileTabNavigation",
     component: () => import("@/views/projects/Day38/MobileTabNavigation.vue"),
   },
   {
-    path: "/projects/verify-account",
+    path: "/projects/verify-account", //41
     name: "VerifyAccount",
     component: () => import("@/views/projects/Day41/VerifyAccount.vue"),
   },
   {
-    path: "/projects/todo-list",
+    path: "/projects/todo-list", //49
     name: "TodoList",
     component: () => import("@/views/projects/Day49/TodoList.vue"),
   },

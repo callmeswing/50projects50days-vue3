@@ -98,6 +98,12 @@ export const projectCards: ProjectCard[] = [
     link: "/projects/increment-counter",
   },
   {
+    id: 16,
+    title: "Drink Water",
+    image: new URL("@/assets/images/day16.png", import.meta.url),
+    link: "/projects/drink-water",
+  },
+  {
     id: 25,
     title: "Sticky Navigation",
     image: new URL("@/assets/images/day25.png", import.meta.url),

@@ -21,6 +21,11 @@
         </p>
         <p>Interest is the best teacher</p>
       </div>
+      <div class="origin-site">
+        you can find the
+        <a href="https://50projects50days.com/" target="_blank">origin site</a>
+        here. : )
+      </div>
     </section>
 
     <section class="project-gallery">
@@ -51,6 +56,8 @@ const title = ref(
 const intro = ref(
   `This website for show my VUE <span style="color: #c0392b;"> + </span>Scss skills`
 );
+
+const originalSite = ref(``);
 
 const { cardWidth } = useCardGrid(150, 5); //最小卡片宽度，最多5列
 

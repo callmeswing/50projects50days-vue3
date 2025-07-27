@@ -39,6 +39,8 @@ import { reactive, ref } from "vue";
 import { notification } from "ant-design-vue";
 
 /** ⭐ 目标：1.数组添加todo 2.状态可以反转 3.可以单独去除 4.可以reset （限制为7项，做提示）*/
+/** ⭐ 目标：存储到localstorage */
+
 const bottom_info =
   "Left click to toggle completed.  <br>Right click to delete todo";
 
