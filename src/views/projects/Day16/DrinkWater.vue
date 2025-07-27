@@ -30,6 +30,8 @@
 </template>
 
 <script setup lang="ts">
+/** ⭐ 进阶：小杯和大杯容量客制化 */
+
 import { computed, reactive, ref } from "vue";
 
 interface SmallBottle {
