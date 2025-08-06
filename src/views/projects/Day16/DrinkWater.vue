@@ -3,8 +3,12 @@
     <h1>Drink Water</h1>
     <h2>Goal: 2 Liters</h2>
     <div class="big-bottle" :style="{ height: bigBottleHeight + 'px' }">
-      <div class="remained" v-show="isRemainedVisible">
-        {{ remained }} L remained
+      <div
+        class="remained"
+        v-show="isRemainedVisible"
+        :style="{ height: remainedHeight + 'px' }"
+      >
+        <p>{{ remained }} L remained</p>
       </div>
       <div
         class="percent"
@@ -31,6 +35,7 @@
 
 <script setup lang="ts">
 /** ⭐ 进阶：小杯和大杯容量客制化 */
+/** ⭐ bug：100%时渲染方式有点奇怪  已解决 样式*/
 
 import { computed, reactive, ref } from "vue";
 
@@ -88,9 +93,13 @@ const isRemainedVisible = computed(() => {
 });
 
 const bigBottleHeight = 340;
-// ref不会自动监听另一个red 需要使用computed
+// ref不会自动监听另一个ref 需要使用computed
 const percentHeight = computed(() => {
   return (bigBottleHeight * percent.value) / 100;
+});
+
+const remainedHeight = computed(() => {
+  return bigBottleHeight - percentHeight.value;
 });
 
 const isPercentVisible = computed(() => {

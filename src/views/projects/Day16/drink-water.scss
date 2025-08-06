@@ -21,18 +21,28 @@ $fill-color: #6ab3f8;
   background-color: aliceblue;
   border: 3px solid #144fc6;
   border-radius: 0 0 50px 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
   overflow: hidden;
+  transition: 0.3s ease;
+  position: relative;
 }
 
 .remained {
-  width: 50%;
+  position: absolute;
+  width: 100%;
+  margin: auto auto;
   color: #144fc6;
-  flex: 1;
+  // flex: 1;
   display: flex;
   align-items: center;
+  transition: 0.3s ease;
+
+  p {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 
 .percent {
@@ -45,6 +55,8 @@ $fill-color: #6ab3f8;
   justify-content: center;
   align-items: center;
   transition: 0.3s ease;
+  position: absolute; // 结合bottom 解决100%时 背景色渲染由上到下的问题 （期望是和其他情况保持一致 由下到上）
+  bottom: 0;
 }
 
 p {
