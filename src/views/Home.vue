@@ -16,10 +16,8 @@
     <section class="intro">
       <div class="container">
         <h1 v-html="intro"></h1>
-        <p>
-          Practice your front-end skills every day by building mini projects
-        </p>
-        <p>Interest is the best teacher</p>
+        <p v-html="subOne"></p>
+        <p v-html="subTwo"></p>
       </div>
       <div class="origin-site">
         you can find the
@@ -49,15 +47,15 @@ import { useCardGrid } from "@/composables/useCardGrid";
 import type { ProjectCard } from "@/types/projectCard";
 import { typedGet } from "@/utils/http";
 
-const title = ref(
-  `50 <span style="color: #c0392b;">Pro</span>jects in 50 days`
-);
+const title = `50 <span style="color: #c0392b;">Pro</span>jects in 50 days`;
 
-const intro = ref(
-  `This website for show my VUE <span style="color: #c0392b;"> + </span>Scss skills`
-);
+const intro = `This website made by Vue<span style="color: #c0392b;"> + </span>Scss`;
 
-const originalSite = ref(``);
+const subOne = `Practice <span style="color: #c0392b;">front-end </span>skills every day by building mini projects`;
+
+const subTwo = "Interest is the best teacher";
+
+// const originalSite = ref(``);
 
 const { cardWidth } = useCardGrid(150, 5); //最小卡片宽度，最多5列
 

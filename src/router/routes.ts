@@ -2,7 +2,8 @@ import type { RouteRecordRaw } from "vue-router";
 import Home from "@views/Home.vue";
 
 const routes: Array<RouteRecordRaw> = [
-  { path: "/", component: Home },
+  { path: "/", redirect: "/home" },
+  { path: "/home", component: Home },
   {
     path: "/projects/expanding-cards",
     name: "ExpandingCards",
@@ -103,9 +104,14 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("@/views/projects/Day15/IncrementCounter.vue"),
   },
   {
-    path: "/projects/drink-water", //16
+    path: "/projects/drink-water",
     name: "DrinkWater",
     component: () => import("@/views/projects/Day16/DrinkWater.vue"),
+  },
+  {
+    path: "/projects/movie-app", //17
+    name: "MovieApp",
+    component: () => import("@/views/projects/Day17/MovieApp.vue"),
   },
   {
     path: "/projects/sticky-navigation", //25

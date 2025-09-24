@@ -104,6 +104,12 @@ export const projectCards: ProjectCard[] = [
     link: "/projects/drink-water",
   },
   {
+    id: 17,
+    title: "Movie App",
+    image: new URL("@/assets/images/day17.png", import.meta.url),
+    link: "/projects/movie-app",
+  },
+  {
     id: 25,
     title: "Sticky Navigation",
     image: new URL("@/assets/images/day25.png", import.meta.url),
