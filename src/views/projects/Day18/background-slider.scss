@@ -1,0 +1,150 @@
+.all-container {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center center; //
+  background-size: cover; //
+  transition: 0.4s;
+  // margin-top: 100px; //测试伪元素实际位置
+  position: relative; // 1是为了子元素定位 2是为了层级空间
+  z-index: 0; // position + 非none的z-index 构造层级容器
+}
+
+// ⭐ 重要note
+/**
+ ⭐ top/left等 用于配合absolute 参与定位设置
+::before分析 
+	1. 这里外层的 all-container/app 均没有设置相对relative，所以会一直往外找到 视口Viewport（也就是before的包含块此时是视口）
+	2. 但是我们发现在具体情况下（没有设置偏移量 top、left）似乎是跟着外部的all-container在移动（all-container设置margin会发现蒙版也移动了）
+		why❓ 因为当我们没有设置偏移量的时候，这里的绝对定位就不会生效，而是使用静态位置static-position，这会使得参考物变成了外层容器即all-container
+	3. 为使其生效，我们需要加上偏移量（absolute 本就应该带上偏移量才能算是真正的absolute）加上偏移量后再设置外层的margin就会发现不会跟着外层一起移动了，此时absolute正式生效
+	4. 当然这里更简单的方式是直接将外层设置为relative！
+
+概念1：	
+	普通流：非定位/非浮动元素的排版轨道
+	绝对定位：脱离普通流；参照 包含块 放置
+	静态位置：仅在未写偏移时用的“假想起点”，来源于“若在普通流会在哪”，不代表其“仍在普通流”
+
+概念2：
+	视口Viewport 同时也是初始包含块IBD	Viewport>html>body>app...
+	包含块 普通流空间就是外部的容器（position为默认static的情况），脱离普通流的则根据具体定位向外寻找（这里就是absolute的规则-找外部的relative直到视口）
+
+
+⭐ z-index  控制层级，数值越大越靠上层（可负数，相等情况下看DOM顺序）
+		需要注意的是：
+			1. 覆盖关系仅限于 同一层级空间（stacking context）里面（也是前提条件：需要存在一个层级空间）
+			2. 子元素要真正参与到层级比较中，也有一定条件 如下2
+
+
+1. 构建层级空间的条件 stacking context ？（元素如何成为一个小空间的root）
+	某些元素因为样式触发，会建立自己的 stacking context，成为一个小世界的“根”。典型情况：
+		- 设置 position（非static） +  z-index（非默认值auto   但这个只用于与外部进行比较、不参与子节点的层级比较 ❗ 整个0就行）
+			- fixed是特殊的（即便z-index是auto）也会构成层级空间
+		- opacity < 1 
+		- transform 非 none
+		- filter 非 none
+		- isolation: isolate
+		等等
+
+		<html> 是天然的 stacking-context
+
+2. 子节点参与层级比较条件（Flex/Grid 特殊情况）
+		- 定位元素（relative | absolute | fixed | sticky）且 z-index非auto
+		- 特殊情况：Flex/Grid容器的子项 且 z-index非auto （但Flex/Grid并不自带层级，也需要满足1中的条件❗）
+		- 触发 stacking-context 的特殊属性也会使元素具备资格（即 既是容器又是一个可比较元素了）
+			- opacity < 1 
+			- transform 非 none
+			- filter 非 none
+			- isolation: isolate
+			等等
+
+3. 层级比较规则
+		由底向上绘制（图层的意思）
+		1. 该层级空间元素本身的（背景/边框）
+		2. z-index 负
+		3. 普通流元素，也就是非定位的元素（即 position: static 所有元素默认如此)
+		4. z-index auto 的定位元素
+		5. z-index >= 0 的定位元素
+
+4. 工程化层级规范 推荐
+	$z-base: 0;         // 普通文档流
+	$z-floating: 10;    // 浮层、吸顶元素
+	$z-dropdown: 100;   // 下拉、Popover
+	$z-modal: 1000;     // 模态
+	$z-toast: 1100;     // 全局通知
+	$z-devtools: 2000;  // 调试覆盖
+
+
+⭐ background 相关
+	background-position: <x> <y>; 
+		控制背景图的起始位置，默认是 0% 0%，等价于 left top
+		常用 left top | right bottom | center center
+	backgroun-size: auto;
+		控制缩放，默认auto 保持原始尺寸
+		可选：
+			1.具体值（px、em）/ 百分比（相对底容器）
+			2.cover 等比例缩放，保证完全覆盖，可能会裁切（溢出部分）
+			3.contain 等比例缩放，保证图片完整，可能留白（铺不满的部分）
+
+
+*/
+.all-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+.slider-container {
+  width: 70vw;
+  height: 70vh;
+  box-shadow: 0 10px 6px, rgba(0, 0, 0, 1), 0 10px 6px, rgba(0, 0, 0, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  opacity: 0;
+  width: 100vw; // 为了使内部图片和外部图片完全对应，需要覆盖同样的区域
+  height: 100vh; // so 设置的对照物是 视口v
+  position: absolute; // 为了层级效果
+  z-index: 1; // 为了层级效果
+  left: -15vw; // 由于上面的 层级+图片对照原因 所以需要设置偏移
+  top: -15vh; // 否则覆盖的区域将不会是期望的那样（正中心，你可以取消slider-container的hidden查看）
+  background-position: center center;
+  background-size: cover;
+  transition: 0.4s ease;
+  background-color: peachpuff;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+// ⭐ top/bottom 搭配transform控制位置
+.arrow {
+  position: fixed;
+  font-size: 2rem;
+  color: white;
+  background-color: transparent;
+  padding: 1.4rem;
+  border: 2px #ffa500 solid;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// ⭐ container占70vw，剩下两边各自15  灵活使用calc
+.left-arrow {
+  left: calc(15vw - 65px);
+}
+
+.right-arrow {
+  right: calc(15vw - 65px);
+}
