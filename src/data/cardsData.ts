@@ -116,6 +116,12 @@ export const projectCards: ProjectCard[] = [
     link: "/projects/backgroun-slider",
   },
   {
+    id: 19,
+    title: "Theme Clock",
+    image: new URL("@/assets/images/day19.png", import.meta.url),
+    link: "/projects/theme-clock",
+  },
+  {
     id: 25,
     title: "Sticky Navigation",
     image: new URL("@/assets/images/day25.png", import.meta.url),

@@ -114,12 +114,16 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("@/views/projects/Day17/MovieApp.vue"),
   },
   {
-    path: "/projects/backgroun-slider", //18
+    path: "/projects/backgroun-slider",
     component: () => import("@/views/projects/Day18/BackgroundSlider.vue"),
   },
   {
     path: "/projects/zindex-test", // TEST z-index
     component: () => import("@/views/projects/Day18/ZIndex.vue"),
+  },
+  {
+    path: "/projects/theme-clock", // 19
+    component: () => import("@/views/projects/Day19/ThemeClock.vue"),
   },
   {
     path: "/projects/sticky-navigation", //25

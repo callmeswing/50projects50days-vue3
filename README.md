@@ -20,6 +20,7 @@
 - **day16:DrinkWater 饮水计划**
 - **day17:MovieApp 电影搜索**
 - **day18:Background Slider 背景切换**
+- **day19:Theme Clock 主题时钟**
 - **day25:StickyNavigation 固定导航栏**
 - **day38:MobileTabNavigation APP 模拟**
 - **day41:VerifyAccount 验证码**
