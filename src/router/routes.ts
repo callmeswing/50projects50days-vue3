@@ -122,8 +122,12 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("@/views/projects/Day18/ZIndex.vue"),
   },
   {
-    path: "/projects/theme-clock", // 19
+    path: "/projects/theme-clock",
     component: () => import("@/views/projects/Day19/ThemeClock.vue"),
+  },
+  {
+    path: "/projects/button-click-effect", // 20
+    component: () => import("@/views/projects/Day20/ButtonClickEffect.vue"),
   },
   {
     path: "/projects/sticky-navigation", //25

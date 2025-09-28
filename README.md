@@ -21,6 +21,7 @@
 - **day17:MovieApp 电影搜索**
 - **day18:Background Slider 背景切换**
 - **day19:Theme Clock 主题时钟**
+- **day20:Button Click Effect 点击效果**
 - **day25:StickyNavigation 固定导航栏**
 - **day38:MobileTabNavigation APP 模拟**
 - **day41:VerifyAccount 验证码**

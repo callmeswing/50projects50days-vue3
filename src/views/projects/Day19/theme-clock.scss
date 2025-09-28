@@ -58,7 +58,7 @@ $transition: background-color 0.5s ease-in;
   justify-content: center;
 }
 
-/** clock-container 视口大于等于600 靠左定位*/
+/** ⭐ clock-container 视口大于等于600 靠左定位*/
 @media (min-width: 720px) {
   .clock-container {
     position: absolute;
@@ -93,7 +93,7 @@ $transition: background-color 0.5s ease-in;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -100%) rotate(0deg);
-  transform-origin: bottom center; // rotate 等行为的参照点（y，x）
+  transform-origin: bottom center; // ⭐ rotate 等行为的参照点（y，x）
   width: 3px;
   background-color: aliceblue;
   transition: all 0.5s ease-in;
@@ -104,12 +104,12 @@ $transition: background-color 0.5s ease-in;
 }
 
 .needle.minute {
-  height: 75px;
+  height: 90px;
   transform: translate(-50%, -100%) rotate(10deg);
 }
 
 .needle.second {
-  height: 98px;
+  height: 105px;
   background-color: $sign-red;
   transform: translate(-50%, -100%) rotate(30deg);
 }

@@ -122,6 +122,12 @@ export const projectCards: ProjectCard[] = [
     link: "/projects/theme-clock",
   },
   {
+    id: 20,
+    title: "Button Click Effect",
+    image: new URL("@/assets/images/day20.png", import.meta.url),
+    link: "/projects/button-click-effect",
+  },
+  {
     id: 25,
     title: "Sticky Navigation",
     image: new URL("@/assets/images/day25.png", import.meta.url),

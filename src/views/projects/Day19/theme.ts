@@ -35,10 +35,13 @@ const useTheme = function () {
     defaultTheme.value = t;
     try {
       localStorage.setItem(KEY, t);
+      applyTheme(t);
+      alert(
+        `Set defualt theme: ${defaultTheme.value.toUpperCase()} - Success!`
+      );
     } catch {
       // TODO
     }
-    applyTheme(t);
   }
 
   function switchTheme() {
