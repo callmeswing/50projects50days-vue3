@@ -126,8 +126,21 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("@/views/projects/Day19/ThemeClock.vue"),
   },
   {
-    path: "/projects/button-click-effect", // 20
+    path: "/projects/button-click-effect",
     component: () => import("@/views/projects/Day20/ButtonClickEffect.vue"),
+  },
+  // {
+  //   path: "/projects/drag-drop",
+  //   component: () => import("@/views/projects/Day21/DragDrop.vue"),
+  // },
+  // {
+  //   path: "/projects/drawing-app",
+  //   component: () => import("@/views/projects/Day22/DrawingAPP.vue"),
+  // },
+  {
+    path: "/projects/content-placeholder",
+    name: "ContentPlaceholder",
+    component: () => import("@/views/projects/Day24/ContentPlaceholder.vue"),
   },
   {
     path: "/projects/sticky-navigation", //25

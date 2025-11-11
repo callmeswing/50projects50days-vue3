@@ -127,6 +127,24 @@ export const projectCards: ProjectCard[] = [
     image: new URL("@/assets/images/day20.png", import.meta.url),
     link: "/projects/button-click-effect",
   },
+  // {
+  //   id: 21,
+  //   title: "Drag N Drop",
+  //   image: new URL("@/assets/images/day21.png", import.meta.url),
+  //   link: "/projects/drag-drop",
+  // },
+  // {
+  //   id: 22,
+  //   title: "Drawing APP",
+  //   image: new URL("@/assets/images/day22.png", import.meta.url),
+  //   link: "/projects/drawing-app",
+  // },
+  {
+    id: 24,
+    title: "Content Placeholder",
+    image: new URL("@/assets/images/day24.png", import.meta.url),
+    link: "/projects/content-placeholder",
+  },
   {
     id: 25,
     title: "Sticky Navigation",
